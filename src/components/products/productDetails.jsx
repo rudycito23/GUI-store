@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getProductById } from "../../api";
-import { ReviewList } from "./reviewList";
-import { ReviewForm } from "./reviewForm";
+import { ReviewList } from "./ReviewList";
+import { ReviewForm } from "./ReviewForm";
 
 export const ProductDetails = () => {
   const [product, setProduct] = useState("");

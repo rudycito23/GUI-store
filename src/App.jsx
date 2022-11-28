@@ -1,3 +1,3 @@
-import { ProductDetails } from "./components/products/ProductDetails";
+import { Router } from "./routes";
 
-export const App = () => <ProductDetails />;
+export const App = () => <Router />;

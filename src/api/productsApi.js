@@ -15,3 +15,21 @@ export const getProductById = (productId) => new Promise((resolve, reject) => {
         reject(x);
     });
 });
+
+export const getProduct = () => new Promise((resolve, reject) => {
+    axios.get(`${apiEndpoint}/`, apiConfig)
+    .then(x => resolve(x.data))
+    .catch(x => {
+        alert(x);
+        reject(x);
+    });
+});
+
+export const addReview = (productId, review) => new Promise((resolve, reject) => {
+    axios.post(`${apiEndpoint}/${productId}/reviews`, review, apiConfig)
+    .then(x => resolve(x.data))
+    .catch(x => {
+        alert(x);
+        reject(x);
+    });
+});

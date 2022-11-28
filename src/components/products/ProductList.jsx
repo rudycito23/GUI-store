@@ -29,7 +29,7 @@ export const ProductList = () => {
         </div>
         <nav
           aria-label="breadcrumb"
-          className="w-90 mx-auto bg-light border border-primary"
+          className="w-90 mx-auto bg-light"
         >
           <ol className="breadcrumb p-3 m-0">
             <li className="breadcrumb-item">

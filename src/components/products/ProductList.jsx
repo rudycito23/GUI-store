@@ -46,12 +46,12 @@ export const ProductList = () => {
         <div className="row">
           {products.map((product, index) => (
             <div className="col-4" key={index}>
-              <div className="card mt-3">
+              <div className="card mt-3 h-100">
                 <div className="row">
                   <div className="col-md-6 offset-md-3">
                     <img
                       src={product.imageUrl}
-                      className="card-img-top img-fluid mt-3"
+                      className="img-fluid mt-3"
                       alt="products"
                     />
                   </div>
@@ -62,14 +62,17 @@ export const ProductList = () => {
                   </div>
                 </div>
                 <div className="card-body text-center">
-                  <h4 className="card-title">{product.name}</h4>
-                  <button
+                  <div className="h-50 d-flex justify-content-center">
+                    <h4 className="card-title">{product.name}</h4>
+                  </div>
+                  <Link
                     type="button"
                     className="btn btn-info text-white w-100"
                     onClick={() => redirectProductDetails(product.id)}
+                    to={"/products/" + product.id}
                   >
                     Product Details
-                  </button>
+                  </Link>
                   <Link
                     className="btn btn-warning w-100 mt-2"
                     onClick={() => theCartContext.addToCart(product)}

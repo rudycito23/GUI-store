@@ -23,7 +23,12 @@ export const MyCart = () => {
               return (
                 <tr key={index}>
                   <td>{item.quantity}</td>
-                  <td>{item.product.name}</td>
+                  <td>
+                    {item.product.name}{" "}
+                    <span className="text-muted">
+                      / ${item.product.price} each
+                    </span>
+                  </td>
                   <td>${item.totalPrice}</td>
                 </tr>
               );

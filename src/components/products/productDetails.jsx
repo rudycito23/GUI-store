@@ -70,8 +70,11 @@ export const ProductDetails = () => {
               </span>
             </h3>
             <p>{product.description}</p>
-            <Link to="/cart" className="btn btn-warning position-absolute bottom-0 self-align-end mb-3" onClick={() => theCartContext.addToCart(product)}>Add to Cart</Link>
-
+            <div className="row">
+              <div className="col-md-6 offset-md-8">
+            <Link to="/cart" className="btn btn-warning position-absolute bottom-0 mb-5" onClick={() => theCartContext.addToCart(product)}>Add to Cart</Link>
+            </div>
+            </div>
           </div>
           
         </div>
